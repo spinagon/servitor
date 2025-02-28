@@ -1,2 +1,3 @@
 #!/bin/bash
-docker rmi -f servitor && docker build . -t servitor
+docker rmi -f servitor || true
+docker build . -t servitor
