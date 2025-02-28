@@ -2,6 +2,6 @@
 
 git config --global --add safe.directory '*'
 git clone /git/.git project
-cd project/src
+cd project/src || exit 1
 git switch develop
-make "$1"
+bash -c "$@"

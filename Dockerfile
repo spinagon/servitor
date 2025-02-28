@@ -20,6 +20,6 @@ RUN apk --no-cache --upgrade add \
     clang18-extra-tools && \
     ln -s /usr/lib/llvm18/bin/clang-format /usr/bin/clang-format 
 
-COPY prepare.sh .
+COPY main.sh .
 
-ENTRYPOINT ["/bin/bash","prepare.sh"]
+ENTRYPOINT ["/bin/bash","main.sh"]

@@ -1,2 +1,4 @@
 #!/bin/bash
-docker run -v $(realpath "$1"):/git --rm servitor "$2"
+PROJECT=$(realpath "$1")
+shift
+docker run -v "$PROJECT":/git --rm servitor "$@"
