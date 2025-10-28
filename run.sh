@@ -2,4 +2,4 @@
 set -euo pipefail
 PROJECT=$(realpath "$1")
 shift
-docker run -v "$PROJECT":/git --rm servitor "$@"
+docker run --ulimit nofile=65536:65536 -v "$PROJECT":/git --rm servitor "$@"

@@ -15,6 +15,7 @@ RUN apk --no-cache --upgrade add \
     pcre2 \
     check-dev \
     subunit-dev \
+    gtest-dev \
     lcov \
     gzip \
     clang18-extra-tools && \
